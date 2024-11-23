@@ -1,0 +1,24 @@
+{% extends 'base.html' %} {% load static %} {% block link %}
+<link rel="stylesheet" href="{% static 'css/notes/note_detail.css' %}" />
+{% endblock %} {% block content %} {% include 'components/header.html' %}
+<section>
+    <div class="note-container">
+        <div class="">
+            <a href="{% url 'notes:note-update' notes.id %}">
+                <button class="edit-btn">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                </button>
+            </a>
+            <a href="{% url 'notes:note-delete' notes.id %}">
+                <button class="delete-btn">
+                    <i class="fa-solid fa-trash"></i>
+                </button>
+            </a>
+            
+        </div>
+        <h1>{{ notes.title }}</h1>
+        <p>{{ notes.body }}</p>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,59 @@
+section{
+    display: flex;
+    justify-content: center;
+   
+    padding: 40px;
+}
+
+.note-container {
+
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
+}
+
+.note-container h1 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.note-container p {
+    font-size: 18px;
+    color: #555;
+    line-height: 30px;
+}
+
+.note-container div{
+    display: flex;
+    justify-content: end;
+}
+
+.note-container .edit-btn{
+    padding: 15px;
+    border: none;
+    background-color: rgb(14, 168, 215);
+    color: #ffff;
+    cursor: pointer;
+}
+
+.note-container .edit-btn:hover{
+    scale: 1.2;
+    transition: 0.5s ease-in-out;
+}
+.note-container .delete-btn{
+    padding: 15px;
+    border: none;
+    background-color: rgb(225, 29, 29);
+    color: #ffff;
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+.note-container .delete-btn:hover{
+    scale: 1.2;
+    transition: 0.5s ease-in-out;
+}

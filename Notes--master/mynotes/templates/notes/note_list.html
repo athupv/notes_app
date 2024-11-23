@@ -1,0 +1,49 @@
+{% extends 'base.html' %} {% load static %} {% block link %}
+<link rel="stylesheet" href="{% static 'css/notes/note_list.css' %}" />
+{% endblock %} {% block content %}
+
+{% include 'components/header.html' %}
+
+<section>
+    {% if messages %}
+    <div class="message-container">
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+    <div class="sub-header">
+        <a href="{% url 'notes:note-create' %}"><button class="add-button" title="Add"><i class="fa-solid fa-plus"></i></button></a>
+    </div>
+    <div class="content">
+        {% for item in items %}
+        <a href="{% url 'notes:note-detail' item.id %}">
+            <div class="card">
+                <span class="subject">Subject:</span>
+                <h3>{{ item.title }}</h3>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+    <div class="pagination">
+        <span class="step-links">
+            {% if page_obj.has_previous %}
+                <a href="?page=1">&laquo; first</a>
+                <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+            {% endif %}
+    
+            <span class="current">
+                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+            </span>
+    
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}">next</a>
+                <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+            {% endif %}
+        </span>
+    </div>
+</section>
+
+{% endblock %}

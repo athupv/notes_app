@@ -1,0 +1,19 @@
+{% extends 'base.html' %} {% load static %} {% block link %}
+<link rel="stylesheet" href="{% static 'css/components/header.css' %}" />
+{% endblock %} {% block content %}
+
+<header>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">NOTES</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="{% url 'notes:note-list' %}">Mylist</a></li>
+            <form action="{% url 'logout' %}" method="post" style="display: inline;">
+              {% csrf_token %}
+             <button type="submit" class="logout-button">Logout</button>
+            </form>
+          </ul>
+        </div>
+   
+</header>
+
+{% endblock %}

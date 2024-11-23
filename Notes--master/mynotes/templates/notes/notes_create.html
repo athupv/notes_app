@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {% load static %} {% block link %}
+<link rel="stylesheet" href="{% static 'css/notes/note_create.css' %}" />
+{% endblock %} {% block content %}
+
+{% include 'components/header.html' %}
+<section class="add-notes">
+    <div class="form-container">
+        <h1>Add Note</h1>
+
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button type="submit">Add</button>
+        </form>
+    </div>
+</section>
+
+{% endblock %}

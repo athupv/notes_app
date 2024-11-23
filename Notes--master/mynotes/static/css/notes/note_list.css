@@ -1,0 +1,134 @@
+.sub-header{
+    padding: 2rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.sub-header .add-button{
+    padding: 15px;
+    border: none;
+    background-color: darkorchid;
+    color: #ffff;
+    cursor: pointer;
+}
+
+.sub-header .add-button:hover{
+    scale: 1.2;
+    transition: 0.5s ease-in-out;
+}
+
+section .content{
+    display: flex;  
+    flex-wrap: wrap;
+    margin: 10px;
+    padding:0 20px 20px 20px;
+
+}
+section .content a{
+    text-decoration: none;
+   
+}
+
+section .content .card {
+    display: flex; 
+    flex-direction: column; 
+    
+    width: 300px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+    background-color: #ffff;
+    cursor: pointer;
+    overflow: hidden; 
+}
+
+.card h3 {
+    text-overflow: ellipsis; 
+    overflow: hidden; 
+    white-space: nowrap; 
+    width: 100%; 
+}
+
+.subject{
+    color: red;
+    display: block;
+}
+
+section .content .card:hover{
+    scale: 1.1;
+    transition: 0.8s ease-in-out;
+}
+
+/* pagination styles */
+
+.pagination {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.step-links {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.step-links a {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 0 2px;
+    color: #007bff;
+    text-decoration: none;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.step-links a:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.step-links .current {
+    padding: 8px 12px;
+    margin: 0 2px;
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.step-links a:first-child,
+.step-links a:last-child {
+    font-weight: bold;
+}
+
+
+/* message framework */
+
+.message-container{
+    margin: 30px 10px;
+}
+
+/* Common styles for all messages */
+.alert {
+
+    background-color: darkviolet;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease-in-out;
+}

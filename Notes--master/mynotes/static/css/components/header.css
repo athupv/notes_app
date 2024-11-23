@@ -1,0 +1,42 @@
+header .nav-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: hotpink;
+   
+}
+header .nav-wrapper > a{
+    text-decoration: none;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #ffff;
+ 
+}
+header .nav-wrapper ul{
+    display: flex;
+}
+header .nav-wrapper ul li{
+    list-style-type: none;
+    padding: 0 5px 0 5px;
+    color: #ffff;
+}
+header .nav-wrapper ul li a{
+    padding: 10px;
+    color: #ffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.logout-button{
+    padding: 7px;
+    border: none;
+    background-color: floralwhite;
+    font-size: 20px;
+    cursor: pointer;
+}
+.logout-button:hover{
+    background-color: crimson;
+    scale: 1.1;
+}

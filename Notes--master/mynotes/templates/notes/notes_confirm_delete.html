@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {% load static %} {% block link %}
+<link rel="stylesheet" href="{% static 'css/notes/note_delete.css' %}" />
+{% endblock %} {% block content %}
+
+{% include 'components/header.html' %}
+<section class="delete-notes">
+    <div class="form-container">
+
+        <h1>Are you sure you want to delete "{{ notes.title }}"?</h1>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="">Delete</button>
+        </form>
+        <a href="{% url 'notes:note-list' %}" class=""><button>Cancel</button></a>
+    </div>
+</section>
+
+{% endblock %}

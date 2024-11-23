@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/users/register.css' %}" />
+{% endblock %}
+
+{% block content %}
+<section class="register">
+    {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}">
+            {{ message }}
+        </div>
+    {% endfor %}
+    <div class="registration">
+        <h2>Register</h2>
+        <form method="post" action="">
+            {% csrf_token %}
+           
+            <div class="form-group">
+                {{ form.username.label_tag }}
+                {{ form.username }}
+            </div>
+            
+            <div class="form-group">
+                {{ form.password1.label_tag }}
+                {{ form.password1 }}
+            </div>
+    
+            <div class="form-group">
+                {{ form.password2.label_tag }}
+                {{ form.password2 }}
+            </div>
+            
+            <button type="submit" class="register-button">Register</button>
+        </form>
+    </div>
+</section>
+
+{% endblock %}
